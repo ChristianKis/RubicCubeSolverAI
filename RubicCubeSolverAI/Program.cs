@@ -5,14 +5,9 @@ namespace RubicCubeSolverAI
     class Program
     {
         static void Main(string[] args)
-        {
-            var rubicsCube = new RubicsCube();
+        {           
 
-            //rubicsCube.RotateBackSideAroundYLeftToTop();            
-            //rubicsCube.RotateFrontSideAroundYRightToTop();
-            //rubicsCube.RotateTopSideAroundZLeftToFront();
-            rubicsCube.RotateBottomSideAroundZRightToFront();
-            
+            var rubicsCube = new Shuffler().GetShuffledCube(1);
 
             Console.WriteLine(rubicsCube);
 

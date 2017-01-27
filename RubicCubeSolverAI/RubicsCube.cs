@@ -16,6 +16,104 @@ namespace RubicCubeSolverAI
             Initialize3X3SolvedCube();
         }
 
+        public Color[,] TopSide
+        {
+            get
+            {
+                var side = new Color[CubeSize, CubeSize];
+                for (var i = 0; i < CubeSize; i++)
+                {
+                    for (var j = 0; j < CubeSize; j++)
+                    {
+                        side[i, j] = _cubes[i, j, CubeSize - 1].Top;
+                    }
+                }
+
+                return side;
+            }
+        }
+        public Color[,] BottomSide
+        {
+            get
+            {
+                var side = new Color[CubeSize, CubeSize];
+                for (var i = 0; i < CubeSize; i++)
+                {
+                    for (var j = 0; j < CubeSize; j++)
+                    {
+                        side[i, j] = _cubes[i, j, 0].Bottom;
+                    }
+                }
+
+                return side;
+            }
+        }
+        public Color[,] FrontSide
+        {
+            get
+            {
+                var side = new Color[CubeSize, CubeSize];
+                for (var i = 0; i < CubeSize; i++)
+                {
+                    for (var j = 0; j < CubeSize; j++)
+                    {
+                        side[i, j] = _cubes[i, 0, j].Front;
+                    }
+                }
+
+                return side;
+            }
+        }
+        public Color[,] BackSide
+        {
+            get
+            {
+                var side = new Color[CubeSize, CubeSize];
+                for (var i = 0; i < CubeSize; i++)
+                {
+                    for (var j = 0; j < CubeSize; j++)
+                    {
+                        side[i, j] = _cubes[i, CubeSize - 1, j].Back;
+                    }
+                }
+
+                return side;
+            }
+        }
+        public Color[,] LeftSide
+        {
+            get
+            {
+                var side = new Color[CubeSize, CubeSize];
+                for (var i = 0; i < CubeSize; i++)
+                {
+                    for (var j = 0; j < CubeSize; j++)
+                    {
+                        side[i, j] = _cubes[0, i, j].Left;
+                    }
+                }
+
+                return side;
+            }
+        }
+        public Color[,] RightSide
+        {
+            get
+            {
+                var side = new Color[CubeSize, CubeSize];
+                for (var i = 0; i < CubeSize; i++)
+                {
+                    for (var j = 0; j < CubeSize; j++)
+                    {
+                        side[i, j] = _cubes[CubeSize - 1, i, j].Right;
+                    }
+                }
+
+                return side;
+            }
+        }
+
+
         private void Initialize3X3SolvedCube()
         {
             // Front side bottom line
