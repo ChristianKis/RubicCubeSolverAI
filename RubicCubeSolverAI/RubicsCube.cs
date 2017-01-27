@@ -4,7 +4,7 @@ namespace RubicCubeSolverAI
 {
     public class RubicsCube
     {
-        private const int CubeSize = 3;
+        public const int CubeSize = 3;
 
         /// <summary>
         /// 0, 0, 0 is the front bottom left cube    
